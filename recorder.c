@@ -124,8 +124,19 @@ void replay(char *device, char *device2, struct input_event_and_dev *eventList, 
 		poll(pfds, 1, 0);
 		if (pfds[0].revents & POLLIN) {
 			// Keyboard action, abort
-			printf("Aborted by keyboard action\n");
-			break;
+			struct input_event ev;
+
+			if(read(pfds[0].fd, &ev, sizeof(struct input_event)) != sizeof(struct input_event))
+				{
+					printf("Error: \n");
+					break;
+				}
+
+				if(ev.code == KEY_F9)
+				{
+                    printf("Aborted by keyboard F9\n");
+					break;
+				}
 		}
 		
 		struct input_event* event = &eventList[i].event;
