@@ -1,6 +1,8 @@
 # input-recorder
 GNU/Linux keyboard and mouse macro recorder.
 
+[demo.webm](https://github.com/Chirunos/input-recorder/assets/85644671/0df48ed2-0266-481e-8840-b2c0a7e27b12)
+
 What this is:
 This is a quick hack or proof of concept to record and replay keyboard and mouse input in GNU/Linux. The whole program is just 263 lines of code, therefore it should be relatively easy to understand by anyone who wants to change it.
 
